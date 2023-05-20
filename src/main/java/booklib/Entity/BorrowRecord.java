@@ -30,7 +30,7 @@ class BorrowRecord {
         this.date = new Date();
         this.returnedDate = null;
         this.bookReturned = false;
-        this.recordID = this.date.toString() + this.borrowedBook.id();
+        this.recordID = (this.date + this.borrowedBook.id()).replace(" ", "");
         return this;
     }
 
@@ -43,11 +43,27 @@ class BorrowRecord {
         return this.recordID;
     }
 
+    public boolean bookIsReturned() {
+        return  this.bookReturned;
+    }
+
+    public Date getReturnedDate() {
+        return  this.returnedDate;
+    }
+
     public Book getBorrowedBook() {
         return borrowedBook;
     }
 
     public Person getBorrower() {
         return borrower;
+    }
+
+    public Date getBorrowDate() {
+        return this.date;
+    }
+
+    public Date getExpectedReturnDate() {
+        return this.expectedReturnDate;
     }
 }

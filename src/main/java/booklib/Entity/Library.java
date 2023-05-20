@@ -32,11 +32,20 @@ public class Library {
             bookCollections.put(title, collection);
 
             String msg = String.format(
-                    "New Collection added\n\tTitle: %s\n\tAuthor%s",
+                    "New Collection added\n\tTitle: %s\n\tAuthor:%s",
                     title, author
             );
             System.out.println(msg);
             logger.info(msg);
+        }
+    }
+
+    public void addToCollection(String title, String author, int copies) {
+        addToCollection(title, author);
+        BookCollection collection = bookCollections.get(title);
+
+        for(int i = 0; i < copies; i++) {
+            collection.addCopy();
         }
     }
 

@@ -28,7 +28,7 @@ public class Main {
 
         while (true) {
             System.out.println("1. Take Borrow Request");
-            System.out.println("2. Fulfill Burrow Request");
+            System.out.println("2. Fulfill Borrow Request");
             System.out.println("3. Initiate Book Return");
             System.out.println("4. Add Books to Library Catalogue");
             System.out.println("0. Exit Program");
@@ -36,23 +36,16 @@ public class Main {
             int choice = getUserChoice(4);
 
             switch (choice) {
-                case 1:
-                    takeBorrowRequest();
-                    break;
-                case 2:
-                    fulfilBorrowRequest();
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                default:
-                    System.exit(0);
+                case 1 -> takeBorrowRequest();
+                case 2 -> fulfilBorrowRequest();
+                case 3 -> initiateBookReturn();
+                case 4 -> addBookToCollection();
+                default -> System.exit(0);
             }
         }
     }
 
-    public static int getUserChoice(int max) {
+    public static int getUserChoice(Integer max) {
         Scanner sc = new Scanner(System.in);
         while (true) {
             System.out.print(": ");
@@ -61,7 +54,7 @@ public class Main {
 
             try {
                 choice = sc.nextInt();
-                if (choice >= 0 && choice <= max)
+                if ( max == null || (choice >= 0 && choice <= max) )
                     return  choice;
                 System.out.format("Pls choose number between (0 - %d)", max);
                 logger.error("Invalid choice number input");
@@ -115,7 +108,7 @@ public class Main {
                 break;
             } catch (InputMismatchException e) {
                 System.out.println("Invalid Input, pls enter a number");
-                sc.nextInt();
+                sc.nextLine();
             }
         }
 
@@ -127,16 +120,26 @@ public class Main {
 
         borrowRequests.add(borrowRequest);
 
-        System.out.println("Your Request have been successfully Taken\n");
+        System.out.println("\nYour Request have been successfully Taken\n");
     }
 
     public static void fulfilBorrowRequest() {
+        Scanner sc = new Scanner(System.in);
+
+        if (borrowRequests.isEmpty()) {
+            System.out.print("Nothing to do here\nPress Enter to head back: ");
+            sc.nextLine();
+            return;
+        }
         BorrowRequest request;
 
         while (!borrowRequests.isEmpty()) {
             request = borrowRequests.poll();
             handleRequest(request);
         }
+
+        System.out.print("All request Handled!!\nPress Enter to continue: ");
+        sc.nextLine();
     }
 
     public static void handleRequest(BorrowRequest request) {
@@ -148,10 +151,43 @@ public class Main {
             System.out.println(request.getPersonName());
             System.out.println("Sorry, the book you requested for is not available");
             System.out.println("Please check back another time!!!\n\n");
+            logger.info("book taken");
         } else {
             System.out.println("Here is the book you requested for " + request.getPersonName());
             System.out.println("Id: " + response.borrowID());
             System.out.println("Expected Return Date: " + response.expectedReturnDate() + "\n\n");
         }
+    }
+
+    public static void addBookToCollection() {
+        System.out.println(">>>>>>>>>>> Add To Book Collection <<<<<<<<<<<<\n");
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter he Title of the books you want to add: ");
+        String bookTitle = sc.nextLine();
+        System.out.print("Enter the Author of the book: ");
+        String bookAuthor = sc.nextLine();
+        System.out.print("How many copies are you adding to collection? ");
+        int copies = getUserChoice(null);
+
+        library.addToCollection(bookTitle, bookAuthor, copies);
+
+        System.out.format("%d new copy(ies) of %s by %s added to Library catalogue\n", copies, bookTitle, bookAuthor);
+        System.out.print("Press Enter to continue: ");
+        sc.nextLine();
+    }
+
+    public static void initiateBookReturn() {
+
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the ID of the books you want to return: ");
+        String bookID = sc.nextLine();
+
+        library.returnBook(bookID);
+
+        System.out.print("Press Enter to continue: ");
+        sc.nextLine();
+
     }
 }

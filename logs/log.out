@@ -1,0 +1,106 @@
+New Collection added
+	Title: Merlin
+	Author:The Guys
+A Copy burrowed from shelf
+Book requested for not available
+book taken
+[INFO ] 2023-05-20 00:31:16,640 booklib.Entity.Library - New Collection added
+	Title: Merlin
+	Author:These Guys
+[INFO ] 2023-05-20 00:32:44,439 booklib.Entity.BookCollection - A Copy burrowed from shelf
+[INFO ] 2023-05-20 00:32:44,591 booklib.Entity.Library - Book requested for not available
+[INFO ] 2023-05-20 00:32:44,593 booklib.Entity.Library - book taken
+[INFO ] 2023-05-20 00:35:15,942 booklib.Entity.Library - New Collection added
+	Title: Merlin
+	Author:TheseGuys
+[INFO ] 2023-05-20 00:40:25,637 booklib.Entity.BookCollection - A Copy burrowed from shelf
+[INFO ] 2023-05-20 00:40:27,379 booklib.Entity.Library - Book requested for not available
+[INFO ] 2023-05-20 00:40:27,439 booklib.Entity.Library - book taken
+[INFO ] 2023-05-20 01:00:39,846 booklib.Entity.Library - New Collection added
+	Title: Merlin
+	Author:TheseGuys
+[INFO ] 2023-05-20 01:01:35,334 booklib.Entity.BookCollection - A Copy burrowed from shelf
+[INFO ] 2023-05-20 01:01:35,602 booklib.Entity.Library - Book requested for not available
+[INFO ] 2023-05-20 01:01:35,604 booklib.Entity.Library - book taken
+[INFO ] 2023-05-20 01:02:05,823 booklib.Entity.BookCollection - Book returned to shelf
+[INFO ] 2023-05-20 01:02:05,825 booklib.Entity.Library - Record updated: Borrowed book return by Warith
+[INFO ] 2023-05-20 01:04:04,674 booklib.Entity.Library - New Collection added
+	Title: Merlin
+	Author:dsdsd
+[INFO ] 2023-05-20 01:05:54,238 booklib.Entity.BookCollection - A Copy burrowed from shelf
+[INFO ] 2023-05-20 01:05:54,633 booklib.Entity.Library - Book requested for not available
+[INFO ] 2023-05-20 01:05:54,635 booklib.Entity.Library - book taken
+[INFO ] 2023-05-20 02:27:03,043 booklib.Entity.BookCollection - A Copy burrowed from shelf
+[INFO ] 2023-05-20 02:27:03,286 booklib.Entity.BookCollection - A Copy burrowed from shelf
+[INFO ] 2023-05-20 02:33:43,820 booklib.Entity.BookCollection - A Copy burrowed from shelf
+[INFO ] 2023-05-20 02:33:43,841 booklib.Entity.BookCollection - Book returned to shelf
+[INFO ] 2023-05-20 02:33:43,982 booklib.Entity.BookCollection - A Copy burrowed from shelf
+[INFO ] 2023-05-20 02:33:44,302 booklib.Entity.BookCollection - A Copy burrowed from shelf
+[INFO ] 2023-05-20 02:33:44,460 booklib.Entity.BookCollection - A Copy burrowed from shelf
+[INFO ] 2023-05-20 07:09:19,573 booklib.Entity.Library - New Collection added
+	Title: Some Book Title
+	Author:Some Author
+[WARN ] 2023-05-20 07:09:19,777 booklib.Entity.Library - Book already collection
+[INFO ] 2023-05-20 07:09:20,660 booklib.Entity.Library - New Collection added
+	Title: Another Available Book Tile
+	Author:Some Author
+[INFO ] 2023-05-20 07:09:20,662 booklib.Entity.Library - New Collection added
+	Title: Another Unavailable Book TiTle
+	Author:Some Author
+[INFO ] 2023-05-20 07:09:20,757 booklib.Entity.Library - New Collection added
+	Title: Book Title
+	Author:Some Author
+[INFO ] 2023-05-20 07:09:20,781 booklib.Entity.Library - Book requested for not available
+[INFO ] 2023-05-20 07:09:21,034 booklib.Entity.Library - New Collection added
+	Title: Some Book To Borrow
+	Author:Some Author
+[INFO ] 2023-05-20 07:09:21,035 booklib.Entity.BookCollection - A Copy burrowed from shelf
+[INFO ] 2023-05-20 07:36:49,362 booklib.Entity.Library - New Collection added
+	Title: Some Book Title
+	Author:Some Author
+[WARN ] 2023-05-20 07:36:49,749 booklib.Entity.Library - Book already collection
+[INFO ] 2023-05-20 07:36:51,758 booklib.Entity.Library - New Collection added
+	Title: Another Available Book Tile
+	Author:Some Author
+[INFO ] 2023-05-20 07:36:51,761 booklib.Entity.Library - New Collection added
+	Title: Another Unavailable Book TiTle
+	Author:Some Author
+[INFO ] 2023-05-20 07:36:51,786 booklib.Entity.Library - New Collection added
+	Title: Just Another Book Title
+	Author:Some Author
+[INFO ] 2023-05-20 07:36:53,224 booklib.Entity.BookCollection - A Copy burrowed from shelf
+[INFO ] 2023-05-20 07:36:53,234 booklib.Entity.BookCollection - Book returned to shelf
+[INFO ] 2023-05-20 07:36:53,235 booklib.Entity.Library - Record updated: Borrowed book return by Test Borrower Name
+[INFO ] 2023-05-20 07:36:53,873 booklib.Entity.Library - New Collection added
+	Title: Some Book To Borrow
+	Author:Some Author
+[INFO ] 2023-05-20 07:36:53,875 booklib.Entity.BookCollection - A Copy burrowed from shelf
+[INFO ] 2023-05-20 07:41:22,763 booklib.Entity.Library - New Collection added
+	Title: Some Book Title
+	Author:Some Author
+[WARN ] 2023-05-20 07:41:22,896 booklib.Entity.Library - Book already collection
+[INFO ] 2023-05-20 07:41:23,797 booklib.Entity.Library - New Collection added
+	Title: Another Available Book Tile
+	Author:Some Author
+[INFO ] 2023-05-20 07:41:23,798 booklib.Entity.Library - New Collection added
+	Title: Another Unavailable Book TiTle
+	Author:Some Author
+[INFO ] 2023-05-20 07:41:23,834 booklib.Entity.Library - New Collection added
+	Title: Just Another Book Title
+	Author:Some Author
+[INFO ] 2023-05-20 07:41:23,970 booklib.Entity.BookCollection - A Copy burrowed from shelf
+[INFO ] 2023-05-20 07:41:24,010 booklib.Entity.BookCollection - Book returned to shelf
+[INFO ] 2023-05-20 07:41:24,011 booklib.Entity.Library - Record updated: Borrowed book return by Test Borrower Name
+[INFO ] 2023-05-20 07:41:24,054 booklib.Entity.Library - New Collection added
+	Title: Some Book To Borrow
+	Author:Some Author
+[INFO ] 2023-05-20 07:41:24,057 booklib.Entity.BookCollection - A Copy burrowed from shelf
+[INFO ] 2023-05-20 07:55:21,661 booklib.Entity.Library - New Collection added
+	Title: Some Book To Borrow
+	Author:Some Author
+[INFO ] 2023-05-20 07:55:22,296 booklib.Entity.BookCollection - A Copy burrowed from shelf
+[INFO ] 2023-05-20 07:59:50,942 booklib.Entity.Library - New Collection added
+	Title: Some Book To Borrow
+	Author:Some Author
+[INFO ] 2023-05-20 07:59:52,094 booklib.Entity.BookCollection - A Copy burrowed from shelf
+[INFO ] 2023-05-20 07:59:52,507 booklib.Entity.Library - Book requested for not available

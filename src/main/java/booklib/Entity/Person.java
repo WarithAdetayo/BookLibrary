@@ -8,39 +8,57 @@ enum PersonnelType {
 
 interface Personnel {
     int getPriority();
+    PersonnelType getType();
 }
 
+// Priority Set in order of position
+// 0 - Highest Rank
+// 1 - Mid-Rank
+// 2 - Lowest Rank
+
 class TeacherPerson implements Personnel {
-    PersonnelType type = PersonnelType.TEACHER;
+    final PersonnelType type = PersonnelType.TEACHER;
 
     public  int getPriority() {
-        return 3;
+        return 0;
+    }
+
+    public PersonnelType getType() {
+        return this.type;
     }
 }
 
 
 class SeniorStudentPerson implements Personnel {
-    PersonnelType type = PersonnelType.SENIOR_STUDENT;
+    final PersonnelType type = PersonnelType.SENIOR_STUDENT;
 
     public  int getPriority() {
-        return 2;
+        return 1;
+    }
+
+    public PersonnelType getType() {
+        return this.type;
     }
 }
 
 
 class JuniorStudentPerson implements Personnel {
-    PersonnelType type = PersonnelType.JUNIOR_STUDENT;
+    final PersonnelType type = PersonnelType.JUNIOR_STUDENT;
 
     public  int getPriority() {
-        return 1;
+        return 2;
+    }
+
+    public PersonnelType getType() {
+        return this.type;
     }
 }
 
 
 class Person implements Comparable<Person> {
     private final String name;
-    private String contactNumber;
-    private Personnel personel;
+    private final String contactNumber;
+    private Personnel personnel;
 
     public Person(String name, String contactNumber) {
         this.name = name;
@@ -49,14 +67,15 @@ class Person implements Comparable<Person> {
 
     public Person setPersonnel(String personType) {
         switch (personType.toUpperCase()) {
-            case "TEACHER":
-                personel = new TeacherPerson();
-            case "SENIOR-STUDENT":
-                personel = new SeniorStudentPerson();
-            default:
-                personel = new JuniorStudentPerson();
+            case "TEACHER" -> personnel = new TeacherPerson();
+            case "SENIOR-STUDENT" -> personnel = new SeniorStudentPerson();
+            default -> personnel = new JuniorStudentPerson();
         }
         return this;
+    }
+
+    public PersonnelType getType() {
+        return this.personnel.getType();
     }
 
     @Override
@@ -66,10 +85,14 @@ class Person implements Comparable<Person> {
 
     @Override
     public int compareTo(Person o) {
-        return this.personel.getPriority() - o.personel.getPriority();
+        return this.personnel.getPriority() - o.personnel.getPriority();
     }
 
     public String getName() {
         return this.name;
+    }
+
+    public String getContact() {
+        return this.contactNumber;
     }
 }
